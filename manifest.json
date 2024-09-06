@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Convex Chrome Extension",
+  "version": "1.0",
+  "description": "This chrome extension allows you to pop open a drawer and view your data or logs without having to leave your browser.",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["drawer.html", "images/logo-color.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
